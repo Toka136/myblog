@@ -105,7 +105,7 @@ footer {
 footer p {
   margin: 0;
 }
-/* Animation */
+/* Animation to Highlihgt card  */
 @keyframes up
 {
     0%
@@ -249,6 +249,11 @@ form input[type="submit"]:hover
     {
        
         width: 25%;
+    }
+    form .flex-input
+    {
+      display: flex;
+      flex-direction: column;
     }
 }
 @media(max-width:374px)
