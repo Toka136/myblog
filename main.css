@@ -1,0 +1,263 @@
+
+body
+ {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+ }
+/* CSS Variables */
+:root
+{
+    --main-color:#004085;
+    --links-color:#073D8D;
+}
+/* Header  Style */
+header 
+{
+  background-color: var(--main-color);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: white;
+}
+/* Articls  Style */
+article {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+article p {
+  color: #666;
+  line-height: 1.6;
+}
+article .btn-primary {
+  background-color: var(--main-color);
+  border: none;
+}
+article .btn-primary:hover {
+  background-color: #0056b3;
+}
+.card-text 
+{
+    color: #666666;
+    line-height: 28px;
+}
+.card:hover
+{
+    transform: translateY(-10px);
+    transition: translateY .3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
+}
+/* Sidebar  Style */
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.sidebar h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+/* Footer  Style */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+footer p {
+  margin: 0;
+}
+/* Animation */
+@keyframes up
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-5px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+/* Scroll to top button  Style */
+.up-button
+{
+    outline: none;
+    border: none;
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+    width: 8%;
+    text-align: justify;
+}
+.up-button i
+{
+    animation-name: up;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.button-show
+{
+    text-align: end;
+   
+    display: none;
+  
+   
+}
+.btn-primary
+{
+  background-color: var(--links-color);
+}
+/* addtion class to make button show on scroll ( by js) */
+.show-button
+{
+   display: block;
+    position: fixed;
+    width: 92%;
+    z-index: 2;
+    bottom: 10px;
+   
+}
+/* Form Style */
+form
+{
+  margin-top: 10px;
+  width: 100%;
+  
+}
+form .flex-input
+{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+form > div
+{
+  width: 45%;
+  text-align: start;
+}
+form input:not(input[type="submit"])
+{
+
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid var(--links-color);
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+}
+form input[type="submit"]
+{
+  margin: 10px 0 30px;
+  outline: none;
+  border: 1px solid var(--main-color);
+  background-color: var(--links-color);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: .3s;
+}
+form input[type="submit"]:hover
+{
+  background-color: white;
+  color: var(--links-color);
+}
+/* responsive design */
+@media(max-width:1030px)
+{
+    .show-button
+    {
+        width: 98%;
+    }
+    .up-button
+    {
+        width: 9%;
+        margin-right: 27px;
+    }
+}
+@media(max-width:900px)
+{
+    
+    .up-button
+    {
+        margin-top: 55px;
+        width: 12%;
+    }
+}
+@media(max-width:767px)
+{
+    
+    .up-button
+    {
+       
+        width: 21%;
+    }
+}
+@media(max-width:424px)
+{
+    
+    .up-button
+    {
+       
+        width: 25%;
+    }
+}
+@media(max-width:374px)
+{
+    
+    .up-button
+    {
+       
+        width: 28%;
+        margin-top: 60px;
+    }
+}
