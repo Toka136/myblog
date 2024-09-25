@@ -22,7 +22,7 @@ This project is a responsive blog webpage that includes advanced styling, layout
 1. Clone the repository or download the project files.
 2. Open the `index.html` file in any modern browser.
 3. Ensure that the `main.css` and `main.js` files are in the same directory as `index.html`.
-4. Bootstrap files are linked via a CDN, so no additional setup is needed.
+4. Bootstrap files are not linked via a CDN.
 
 ## File Structure
 
